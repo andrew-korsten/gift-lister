@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "first-name": "Andrew",
+      "last-name": "Korsten",
+      "gift": "socks",
+      "id": 1
+    },
+    {
+      "first-name": "Elon",
+      "last-name": "Musk",
+      "gift": "blue T-shirt",
+      "id": 2
+    },
+    {
+      "firstName": "fg",
+      "lastName": "fg",
+      "gift": "fg",
+      "id": "3"
+    },
+    {
+      "firstName": "hj",
+      "lastName": "gh",
+      "gift": "gh",
+      "id": "5"
+    }
+  ]
+}
