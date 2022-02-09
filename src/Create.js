@@ -1,11 +1,16 @@
 import { useState } from "react";
 
+// A2.1.2 Import uuid
+import { v4 as uuidv4 } from 'uuid';
+
 const Create = () => {
+
+    const randomId = uuidv4();
+    console.log(randomId)
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [gift, setGift] = useState('');
-    const [id, setId] = useState('');
 
     const [items, setItems] = useState('');
 
@@ -14,7 +19,27 @@ const Create = () => {
     const submitHandler = (e) => {
         e.preventDefault();
 
-        const item = {firstName, lastName, gift, id};
+        const itemWithoutId = {firstName, lastName, gift};
+
+        //A2.1 Create the random id 
+        // A2.1.1 Install uuid $ npm install uuid (next is above)
+
+        // A2.1.3. Invoke the randomId
+        const randomId = uuidv4()
+
+        // A2.1.4. Create the obj for the randomId
+
+        let randomIdObject = {
+            id: randomId
+        }
+
+        //A2.1.4 Merge the two objects
+        let item = {
+            ...itemWithoutId,
+            ...randomIdObject
+        };
+
+        //A.2.2 Fetch POST req
 
         fetch('http://localhost:8000/items/', {
             method: 'POST',
@@ -79,14 +104,6 @@ const Create = () => {
             required 
             value={gift}
             onChange={(e) => setGift(e.target.value)}
-            />
-
-            <label>ID</label>
-            <input 
-            type="text" 
-            required 
-            value={id}
-            onChange={(e) => setId(e.target.value)}
             />
 
             <button>Add</button>
