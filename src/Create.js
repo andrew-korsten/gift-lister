@@ -3,7 +3,7 @@ import { useState } from "react";
 // A2.1.2 Import uuid
 import { v4 as uuidv4 } from 'uuid';
 
-const Create = () => {
+const Create = ({ items, itemGrabber}) => {
 
 
     const [firstName, setFirstName] = useState('');
@@ -30,10 +30,13 @@ const Create = () => {
         }
 
         //A2.1.4 Merge the two objects
-        let item = {
+        let newItem = {
             ...itemWithoutId,
             ...randomIdObject
         };
+
+        // B3. Input as the param the "item" into "ItemGrabber"
+        itemGrabber(newItem);
 
         //A.2.2 Fetch POST req
 
@@ -42,11 +45,11 @@ const Create = () => {
             headers: { 
                 "Content-Type": "application/json" 
             },
-            body: JSON.stringify(item)
+            body: JSON.stringify(newItem)
         })
         .then(() => {
             console.log('New item added')
-            console.log(item);
+            console.log(newItem);
         })
     }
 

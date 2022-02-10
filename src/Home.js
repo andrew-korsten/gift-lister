@@ -30,8 +30,21 @@ const Home = () => {
           .catch(error => console.log('ERROR'))       
 
     }, [])
-  
-      console.log(items);
+
+    // B1. in Home.js, create the function "itemGrabber" to grab the "item" obj and CL it
+    const itemGrabber = (addedItem) => {
+      console.log(items)
+      console.log(addedItem)
+
+      //C1 Update THE ARRAY!!! "items" with "newItem" by creating "updatedItems"
+      setItems([...items, addedItem]);
+
+      console.log(items)
+
+    }
+
+    console.log(items)    
+
 
     return (<div className="home">
         <h1>Christmas Gift Lister: List Gifts like it's your first nature!</h1>
@@ -40,17 +53,21 @@ const Home = () => {
 
         {items && 
 
-        items.map((item) => (
-            <div className="item-container" key={item.id}>
-                <p>Name: {item.firstName} {item.lastName}</p>
-                <p>Gift: {item.gift}</p>
-            </div>
-        ))
+          items.map((item) => (
+              <div className="item-container" key={item.id}>
+                  <p>Name: {item.firstName} {item.lastName}</p>
+                  <p>Gift: {item.gift}</p>
+              </div>
+          ))
 
         }
 
-        <Create items={items} />
+
+        {/* // B2. Prop in and out the function in Create.js */}
+        <Create itemGrabber={itemGrabber} />
+
         <List />
+
     </div>);
 }
  
