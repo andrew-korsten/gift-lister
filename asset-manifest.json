@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/gift-lister/static/css/main.e6c13ad2.css",
-    "main.js": "/gift-lister/static/js/main.4219e589.js",
+    "main.css": "/gift-lister/static/css/main.ae34e5ec.css",
+    "main.js": "/gift-lister/static/js/main.4e636c58.js",
     "index.html": "/gift-lister/index.html",
-    "main.e6c13ad2.css.map": "/gift-lister/static/css/main.e6c13ad2.css.map",
-    "main.4219e589.js.map": "/gift-lister/static/js/main.4219e589.js.map"
+    "main.ae34e5ec.css.map": "/gift-lister/static/css/main.ae34e5ec.css.map",
+    "main.4e636c58.js.map": "/gift-lister/static/js/main.4e636c58.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.4219e589.js"
+    "static/css/main.ae34e5ec.css",
+    "static/js/main.4e636c58.js"
   ]
 }
