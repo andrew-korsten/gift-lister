@@ -5,14 +5,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Create = () => {
 
-    const randomId = uuidv4();
-    console.log(randomId)
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [gift, setGift] = useState('');
-
-    const [items, setItems] = useState('');
 
 
     // A2	form handler function
@@ -77,7 +73,6 @@ const Create = () => {
     //     .catch(error => console.log('ERROR'))
     // }
     
-    console.log(items);
 
     return (<div className="create">
         {/* A1	form */}
@@ -110,8 +105,6 @@ const Create = () => {
 
         </form>
 
-        <h1>Get-all button</h1>
-        {/* <button onClick={getAllHandler}>Get all</button> */}
     </div>);
 }
  

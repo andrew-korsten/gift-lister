@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "first-name": "Andrew",
-      "last-name": "Korsten",
-      "gift": "socks",
-      "id": 1
-    },
-    {
-      "first-name": "Elon",
-      "last-name": "Musk",
-      "gift": "blue T-shirt",
-      "id": 2
-    },
-    {
       "firstName": "fg",
       "lastName": "fg",
       "gift": "fg",
@@ -25,28 +13,16 @@
       "id": "5"
     },
     {
-      "firstName": "h",
-      "lastName": "hj",
-      "gift": "hgh",
-      "id": "54"
+      "firstName": "cv",
+      "lastName": "cv",
+      "gift": "de",
+      "id": "72e577c2-ef6c-4193-a428-3984e4b6ec4c"
     },
     {
       "firstName": "fg",
       "lastName": "fg",
-      "gift": "4",
-      "id": "WKutglO"
-    },
-    {
-      "firstName": "fg",
-      "lastName": "fg44",
-      "gift": "44",
-      "id": "1ebd84c1-f67a-45f8-80a6-1f1647ffaccb"
-    },
-    {
-      "firstName": "fg",
-      "lastName": "fg",
-      "gift": "44",
-      "id": "ab33b055-5e34-4b25-a7b7-063d1a3d5133"
+      "gift": "fg",
+      "id": "ae29c375-0305-45b4-9db1-aed20345d9fe"
     }
   ]
 }
