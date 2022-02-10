@@ -43,30 +43,31 @@ const Home = () => {
 
     }
 
-    console.log(items)    
+    // D4. Create the itemDeleter funct
+    const itemDeleter = (deletedId) => {
+
+      // D5. Filter out the item with the selected id
+      const upDatedItems = items.filter(item => item.id !== deletedId)
+
+      // D6. setState
+      setItems(upDatedItems)
+
+      // D7. fetch Delete
+      fetch('http://localhost:8000/items/' + deletedId, {
+        method: 'DELETE'
+      })
+
+    }
 
 
     return (<div className="home">
         <h1>Christmas Gift Lister: List Gifts like it's your first nature!</h1>
 
-        <p>this is the list this is the listthis is the listthis is the list </p>
-
-        {items && 
-
-          items.map((item) => (
-              <div className="item-container" key={item.id}>
-                  <p>Name: {item.firstName} {item.lastName}</p>
-                  <p>Gift: {item.gift}</p>
-              </div>
-          ))
-
-        }
-
-
         {/* // B2. Prop in and out the function in Create.js */}
         <Create itemGrabber={itemGrabber} />
 
-        <List />
+        {/* D6. Prop in out itemDeleter */}
+        <List items={items} itemDeleter={itemDeleter} />
 
     </div>);
 }
